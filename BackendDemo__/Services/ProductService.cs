@@ -15,9 +15,9 @@ public class ProductService
     }
 
     public Task<List<Product>> GetAll() => _repo.GetAll();
-    public Task<Product?> GetById(int id) => _repo.GetById(id);
+    public Task<Product> GetById(int id) => _repo.GetById(id);
     public Task<Product> Create(Product p) => _repo.Create(p);
-    public Task<Product?> Update(Product p) => _repo.Update(p);
+    public Task<Product> Update(Product p) => _repo.Update(p);
     public Task<bool> Delete(int id) => _repo.Delete(id);
 }
 

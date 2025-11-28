@@ -3,28 +3,84 @@ using BackendDemo.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Agregar servicios a la inyección de dependencias
-builder.Services.AddControllers(); // <--- necesario para los controllers
-builder.Services.AddSingleton<IProductRepository, ProductRepository>();
-builder.Services.AddScoped<ProductService>();
+// Agregar servicios individuales
+builder.Services.AddSingleton<ProductRepository>();         // Memoria
+builder.Services.AddSingleton<MongoProductRepository>();    // MongoDB
+builder.Services.AddSingleton<SqliteProductRepository>();   // SQLite
 
-// Swagger/OpenAPI (opcional)
+// Composite repository que combina los tres
+builder.Services.AddSingleton<IProductRepository>(sp =>
+    new CompositeProductRepository(
+        sp.GetRequiredService<ProductRepository>(),
+        sp.GetRequiredService<MongoProductRepository>(),
+        sp.GetRequiredService<SqliteProductRepository>()
+    )
+);
+
+builder.Services.AddScoped<ProductService>();
+builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-// Configuración de pipeline HTTP
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
 
 app.UseHttpsRedirection();
-
-// Mapear controllers
 app.MapControllers();
-
 app.Run();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// using BackendDemo.Repositories;
+// using BackendDemo.Services;
+
+// var builder = WebApplication.CreateBuilder(args);
+
+// // Agregar servicios a la inyección de dependencias
+// builder.Services.AddControllers(); // <--- necesario para los controllers
+// builder.Services.AddSingleton<IProductRepository, ProductRepository>();
+// builder.Services.AddScoped<ProductService>();
+
+// // Swagger/OpenAPI (opcional)
+// builder.Services.AddOpenApi();
+
+// var app = builder.Build();
+
+// // Configuración de pipeline HTTP
+// if (app.Environment.IsDevelopment())
+// {
+//     app.MapOpenApi();
+// }
+
+// app.UseHttpsRedirection();
+
+// // Mapear controllers
+// app.MapControllers();
+
+// app.Run();
 
 
 
