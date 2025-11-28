@@ -3,26 +3,32 @@ using BackendDemo.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Agregar servicios individuales
-builder.Services.AddSingleton<ProductRepository>();         // Memoria
-builder.Services.AddSingleton<MongoProductRepository>();    // MongoDB
-builder.Services.AddSingleton<SqliteProductRepository>();   // SQLite
-
-// Composite repository que combina los tres
-builder.Services.AddSingleton<IProductRepository>(sp =>
-    new CompositeProductRepository(
-        sp.GetRequiredService<ProductRepository>(),
-        sp.GetRequiredService<MongoProductRepository>(),
-        sp.GetRequiredService<SqliteProductRepository>()
-    )
-);
-
-builder.Services.AddScoped<ProductService>();
+// Agregar servicios a la inyección de dependencias
 builder.Services.AddControllers();
+
+// --- Repositorios individuales ---
+builder.Services.AddSingleton<ProductRepository>();   // memoria
+builder.Services.AddSingleton<SqliteProductRepository>();
+builder.Services.AddSingleton<MongoProductRepository>();
+
+// --- Repositorio compuesto ---
+builder.Services.AddScoped<IProductRepository>(sp =>
+{
+    var mem = sp.GetRequiredService<ProductRepository>();
+    var sqlite = sp.GetRequiredService<SqliteProductRepository>();
+    var mongo = sp.GetRequiredService<MongoProductRepository>();
+    return new CompositeProductRepository(mem, sqlite, mongo);
+});
+
+// --- Servicios ---
+builder.Services.AddScoped<ProductService>();
+
+// --- Swagger/OpenAPI ---
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
+// --- Middleware ---
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
@@ -30,7 +36,61 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.MapControllers();
+
 app.Run();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// using BackendDemo.Repositories;
+// using BackendDemo.Services;
+
+// var builder = WebApplication.CreateBuilder(args);
+
+// // Agregar servicios individuales
+// builder.Services.AddSingleton<ProductRepository>();         // Memoria
+// builder.Services.AddSingleton<MongoProductRepository>();    // MongoDB
+// builder.Services.AddSingleton<SqliteProductRepository>();   // SQLite
+
+// // Composite repository que combina los tres
+// builder.Services.AddSingleton<IProductRepository>(sp =>
+//     new CompositeProductRepository(
+//         sp.GetRequiredService<ProductRepository>(),
+//         sp.GetRequiredService<MongoProductRepository>(),
+//         sp.GetRequiredService<SqliteProductRepository>()
+//     )
+// );
+
+// builder.Services.AddScoped<ProductService>();
+// builder.Services.AddControllers();
+// builder.Services.AddOpenApi();
+
+// var app = builder.Build();
+
+// if (app.Environment.IsDevelopment())
+// {
+//     app.MapOpenApi();
+// }
+
+// app.UseHttpsRedirection();
+// app.MapControllers();
+// app.Run();
 
 
 
