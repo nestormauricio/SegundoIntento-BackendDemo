@@ -30,7 +30,6 @@ public class ProductRepository : IProductRepository
         existing.Price = product.Price;
         // return Task.FromResult(existing);
         return Task.FromResult<Product?>(existing);
-
     }
 
     public Task<bool> Delete(int id)
