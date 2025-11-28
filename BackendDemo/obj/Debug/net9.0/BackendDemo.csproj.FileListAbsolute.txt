@@ -1,0 +1,8 @@
+C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\obj\Debug\net9.0\BackendDemo.csproj.AssemblyReference.cache
+C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\obj\Debug\net9.0\BackendDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\obj\Debug\net9.0\BackendDemo.AssemblyInfoInputs.cache
+C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\obj\Debug\net9.0\BackendDemo.AssemblyInfo.cs
+C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\obj\Debug\net9.0\BackendDemo.csproj.CoreCompileInputs.cache
+C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\obj\Debug\net9.0\BackendDemo.MvcApplicationPartsAssemblyInfo.cs
+C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\obj\Debug\net9.0\BackendDemo.MvcApplicationPartsAssemblyInfo.cache
