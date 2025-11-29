@@ -8,6 +8,7 @@ C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\Backend
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\BackendDemo.pdb
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\RabbitMQ.Client.dll
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\obj\Debug\net9.0\BackendDemo.csproj.AssemblyReference.cache
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\obj\Debug\net9.0\rpswa.dswa.cache.json
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\obj\Debug\net9.0\BackendDemo.GeneratedMSBuildEditorConfig.editorconfig
