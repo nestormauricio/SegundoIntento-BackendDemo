@@ -1,7 +1,14 @@
 using BackendDemo.Repositories;
 using BackendDemo.Services;
 
+using BackendDemo.Infrastructure.Logging;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Agregar logging a archivo
+builder.Logging.ClearProviders(); // Opcional: quitar consola
+builder.Logging.AddConsole(); // Puedes dejarla si quieres ver en consola
+builder.Logging.AddFileLogging(Path.Combine(AppContext.BaseDirectory, "logs"));
 
 // Agregar servicios
 builder.Services.AddControllers();
