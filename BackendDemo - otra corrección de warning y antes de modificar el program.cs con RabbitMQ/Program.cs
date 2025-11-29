@@ -3,126 +3,28 @@ using BackendDemo.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Agregar servicios
-builder.Services.AddControllers();
+// Agregar servicios a la inyección de dependencias
+builder.Services.AddControllers(); // <--- necesario para los controllers
 builder.Services.AddSingleton<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<ProductService>();
-builder.Services.AddSingleton<RabbitMqService>();
 
-// Swagger/OpenAPI
+// Swagger/OpenAPI (opcional)
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
+// Configuración de pipeline HTTP
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
 
-// ❌ Quitar porque no tienes HTTPS configurado
-// app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 
 // Mapear controllers
 app.MapControllers();
 
 app.Run();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// using BackendDemo.Repositories;
-// using BackendDemo.Services;
-
-// var builder = WebApplication.CreateBuilder(args);
-
-// // Agregar servicios
-// builder.Services.AddControllers();
-// builder.Services.AddSingleton<IProductRepository, ProductRepository>();
-// builder.Services.AddScoped<ProductService>();
-// builder.Services.AddSingleton<RabbitMqService>();   // <--- IMPORTANTE
-
-// // Swagger/OpenAPI
-// builder.Services.AddOpenApi();
-
-// var app = builder.Build();
-
-// if (app.Environment.IsDevelopment())
-// {
-//     app.MapOpenApi();
-// }
-
-// app.UseHttpsRedirection();
-
-// app.MapControllers();
-
-// app.Run();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// using BackendDemo.Repositories;
-// using BackendDemo.Services;
-
-// var builder = WebApplication.CreateBuilder(args);
-
-// // Agregar servicios a la inyección de dependencias
-// builder.Services.AddControllers(); // <--- necesario para los controllers
-// builder.Services.AddSingleton<IProductRepository, ProductRepository>();
-// builder.Services.AddScoped<ProductService>();
-
-// // Swagger/OpenAPI (opcional)
-// builder.Services.AddOpenApi();
-
-// var app = builder.Build();
-
-// // Configuración de pipeline HTTP
-// if (app.Environment.IsDevelopment())
-// {
-//     app.MapOpenApi();
-// }
-
-// app.UseHttpsRedirection();
-
-// // Mapear controllers
-// app.MapControllers();
-
-// app.Run();
 
 
 
