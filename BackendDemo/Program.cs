@@ -9,6 +9,8 @@ builder.Services.AddSingleton<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<ProductService>();
 builder.Services.AddSingleton<RabbitMqService>();
 
+builder.Services.AddSingleton<ProductConsumerService>();
+    
 // Swagger/OpenAPI
 builder.Services.AddOpenApi();
 
