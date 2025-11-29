@@ -1,11 +1,10 @@
 using BackendDemo.Domain;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace BackendDemo.Repositories;
 
 public class CompositeProductRepository : IProductRepository
 {
+<<<<<<< HEAD
     private readonly IProductRepository _memoryRepo;
     private readonly IProductRepository _sqliteRepo;
     private readonly IProductRepository _mongoRepo;
@@ -18,45 +17,87 @@ public class CompositeProductRepository : IProductRepository
         _memoryRepo = memoryRepo;
         _sqliteRepo = sqliteRepo;
         _mongoRepo = mongoRepo;
+=======
+    private readonly ProductRepository _mem;
+    private readonly SqliteProductRepository _sqlite;
+    private readonly MongoProductRepository _mongo;
+
+    public CompositeProductRepository(ProductRepository mem, SqliteProductRepository sqlite, MongoProductRepository mongo)
+    {
+        _mem = mem;
+        _sqlite = sqlite;
+        _mongo = mongo;
+>>>>>>> stable
     }
 
-    public async Task<List<Product>> GetAll()
+    public async Task<Product> GetById(int id)
     {
+<<<<<<< HEAD
         // Leemos de memoria como referencia principal
         return await _memoryRepo.GetAll();
+=======
+        var product = await _mem.GetById(id);
+        if (product != null) return product;
+        product = await _sqlite.GetById(id);
+        if (product != null) return product;
+        return await _mongo.GetById(id);
+>>>>>>> stable
     }
 
-    public async Task<Product?> GetById(int id)
+    public async Task<IEnumerable<Product>> GetAll()
     {
-        return await _memoryRepo.GetById(id);
+        var mem = await _mem.GetAll();
+        var sqlite = await _sqlite.GetAll();
+        var mongo = await _mongo.GetAll();
+        return mem.Concat(sqlite).Concat(mongo);
     }
 
-    public async Task<Product> Create(Product product)
+    public async Task<Product> Add(Product product)
     {
+<<<<<<< HEAD
         // Crear en los tres repositorios
         var mem = await _memoryRepo.Create(product);
         var sql = await _sqliteRepo.Create(product);
         var mongo = await _mongoRepo.Create(product);
 
         return mem; // devolver el de memoria por consistencia
+=======
+        await _mem.Add(product);
+        await _sqlite.Add(product);
+        await _mongo.Add(product);
+        return product;
+>>>>>>> stable
     }
 
-    public async Task<Product?> Update(Product product)
+    public async Task<Product> Update(Product product)
     {
+<<<<<<< HEAD
         var mem = await _memoryRepo.Update(product);
         var sql = await _sqliteRepo.Update(product);
         var mongo = await _mongoRepo.Update(product);
 
         return mem;
+=======
+        await _mem.Update(product);
+        await _sqlite.Update(product);
+        await _mongo.Update(product);
+        return product;
+>>>>>>> stable
     }
 
-    public async Task<bool> Delete(int id)
+    public async Task Delete(int id)
     {
+<<<<<<< HEAD
         var mem = await _memoryRepo.Delete(id);
         var sql = await _sqliteRepo.Delete(id);
         var mongo = await _mongoRepo.Delete(id);
 
         return mem;
+=======
+        await _mem.Delete(id);
+        await _sqlite.Delete(id);
+        await _mongo.Delete(id);
+>>>>>>> stable
     }
 }
 
@@ -81,6 +122,7 @@ public class CompositeProductRepository : IProductRepository
 
 
 
+<<<<<<< HEAD
 
 // using BackendDemo.Domain;
 // using System.Collections.Generic;
@@ -161,6 +203,8 @@ public class CompositeProductRepository : IProductRepository
 
 
 
+=======
+>>>>>>> stable
 // using BackendDemo.Domain;
 // using System.Collections.Generic;
 // using System.Threading.Tasks;

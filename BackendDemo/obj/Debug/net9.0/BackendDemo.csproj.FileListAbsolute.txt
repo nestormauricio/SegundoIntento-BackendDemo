@@ -6,6 +6,7 @@ C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\Backend
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\BackendDemo.runtimeconfig.json
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\BackendDemo.dll
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\BackendDemo.pdb
+<<<<<<< HEAD
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\DnsClient.dll
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\Humanizer.dll
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
@@ -21,18 +22,30 @@ C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\Microso
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Design.dll
+=======
+C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\Dapper.dll
+C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\DnsClient.dll
+C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\Microsoft.Data.Sqlite.dll
+C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+>>>>>>> stable
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Sqlite.dll
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\Microsoft.OpenApi.dll
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\MongoDB.Bson.dll
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\MongoDB.Driver.dll
+<<<<<<< HEAD
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\Mono.TextTemplating.dll
+=======
+>>>>>>> stable
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\SharpCompress.dll
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\Snappier.dll
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\SQLitePCLRaw.batteries_v2.dll
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\SQLitePCLRaw.core.dll
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\SQLitePCLRaw.provider.e_sqlite3.dll
+<<<<<<< HEAD
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\System.CodeDom.dll
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\System.Composition.AttributedModel.dll
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\System.Composition.Convention.dll
@@ -105,6 +118,9 @@ C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\ru\Micr
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+=======
+C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\ZstdSharp.dll
+>>>>>>> stable
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\runtimes\browser-wasm\nativeassets\net9.0\e_sqlite3.a
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\runtimes\linux-arm\native\libe_sqlite3.so
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\bin\Debug\net9.0\runtimes\linux-arm64\native\libe_sqlite3.so
@@ -134,6 +150,10 @@ C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\obj\Debug\net9.0\Backend
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\obj\Debug\net9.0\BackendDemo.csproj.CoreCompileInputs.cache
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\obj\Debug\net9.0\BackendDemo.MvcApplicationPartsAssemblyInfo.cs
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\obj\Debug\net9.0\BackendDemo.MvcApplicationPartsAssemblyInfo.cache
+<<<<<<< HEAD
+=======
+C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\obj\Debug\net9.0\BackendDemo.sourcelink.json
+>>>>>>> stable
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\obj\Debug\net9.0\rjimswa.dswa.cache.json
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\Proyectos\TECHUniversidad\SegundoIntento\BackendDemo\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
