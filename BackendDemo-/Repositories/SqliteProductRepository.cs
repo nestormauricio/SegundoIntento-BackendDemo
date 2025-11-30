@@ -8,7 +8,7 @@ public class SqliteProductRepository : IProductRepository
 {
     private readonly string _connectionString = "Data Source=Products.db";
 
-    public async Task<Product> GetById(int id)
+    public async Task<Product?> GetById(int id)
     {
         using var connection = new SqliteConnection(_connectionString);
         return await connection.QuerySingleOrDefaultAsync<Product>("SELECT * FROM Products WHERE Id = @Id", new { Id = id }) 
@@ -30,7 +30,7 @@ public class SqliteProductRepository : IProductRepository
         return product;
     }
 
-    public async Task<Product> Update(Product product)
+    public async Task<Product?> Update(Product product)
     {
         using var connection = new SqliteConnection(_connectionString);
         await connection.ExecuteAsync("UPDATE Products SET Name = @Name, Price = @Price WHERE Id = @Id", product);
